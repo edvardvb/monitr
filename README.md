@@ -8,13 +8,15 @@ Expanding the universe
 <p>Install linux Mint
 <br>If you are using virtual box: Remember to set up bidirectional clipboard (and drag-and-drop)</p>
 
-#### 1.1)
+1.1)
+<p>
 If you are setting up linux mint:<br>
  - press windows key<br>
  - type "keyboard"<br>
  - press "keyboard", "layout"<br>
  - press "plus sign", find your keyboard<br>
  - move the new keyboardlayout to the top (press keyboard, press up-arrow)<br>
+ </p>
  
 #### 2)
 <p>
