@@ -1,8 +1,13 @@
 # monitr
 Expanding the universe
 
+
+### Get ready for development (on linux):
 1)
-Use a unix based system
+
+Install linux Mint
+If you are using virtual box: Remember to set up bidirectional clipboard (and drag-and-drop)
+
 1.1)
 If you are setting up linux mint:
  - press windows key
@@ -46,9 +51,11 @@ Should return something like: "Agent pid 59566"
 4.3) Just do this:
 ssh-add ~/.ssh/id_rsa
 
-5) 
+5) Do this:
 xclip -sel c  ~/.ssh/id_rsa.pub
-# Copies the contents of the id_rsa.pub file to your clipboard
+-- Copies the contents of the id_rsa.pub file to your clipboard
+
+Now you can paste it in your browser (as described under)
 
 6)
 Do points 2 to 8: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
