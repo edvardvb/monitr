@@ -1,0 +1,46 @@
+html{
+	height:100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding:0;
+
+}
+
+.wrapper {
+	@include container(1080px);
+}
+
+*, *:before, *:after {
+	@include box-sizing(border-box);
+
+}
+
+a, a:hover, a:active {
+	list-style-type: none;
+	text-decoration: none;
+	background-color: none;
+	color: none;
+}
+
+.center {
+  margin: 0 auto;
+  display: block;
+}
+
+h1,h2,h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $main-primary-font, Georgia, Times, serif;
+}
+p, a, div {
+	font-family: $main-secondary-font, Helvetica, Arial, sans-serif;
+}
+
+a, a:hover, a:active {
+  color: black;
+}

@@ -1,0 +1,13 @@
+@import "compass";
+@import "partials/grids";
+@import "partials/variables";
+@import "partials/layout";
+@import "pages";
+
+.header-container {
+  background-color: #2980b9;
+}
+
+.header-content {
+  padding: 1rem;
+}
