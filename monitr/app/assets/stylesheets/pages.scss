@@ -2,13 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.ex-box-container {
+.button-container {
   @include full;
-  padding: gutter(12)/2;
-  padding-bottom: 0;
-}
-.ex-box {
-  @include gallery(4 of 12);
-  margin-bottom: gutter(12)/2;
   background-color: whitesmoke;
+
+  .button-wrapper {
+    @include container(1080px);
+    padding: gutter(12)/2;
+    padding-bottom: none;
+  }
+  .button-box {
+    @include gallery(6 of 12);
+    @include display-flex;
+    border: 2px solid rgb(175, 175, 175);
+    font-size: 3rem;
+    height: $button-size;
+    margin-bottom: gutter(12)/2;
+    * {
+      margin: auto;
+    }
+    @include breakpoint(700px) {
+      @include gallery(4 of 12);
+    }
+    @include breakpoint(1080px) {
+      @include gallery(3 of 12);
+    }
+  }
 }
