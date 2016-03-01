@@ -86,10 +86,20 @@ Now you can paste it in your browser (as described under)
 Do points 2 to 8: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
  </p>
 #### 7) (For Windows, fixes errors)
-Run the following commands ( opens irb console ):
+Windows functions a little differently to UNIX-based systems.
+Two gems specifically for windows installed. 
+Please use the windows branch when using windows, just in case something breaks.
+
+If you get errors, try the following:
+1. Run the following commands ( opens irb console ):
 > irb
 Then write the following in the console:
 > File.expand_path("./")
 > exit ( or ctrl+c ) 
 
-
+2. Possible solution 2:
+> ruby -e "puts RUBY_PLATFORM"
+3. Possible solution 3:
+> mv sites tmpsites
+> mv tmpsites sites
+(Take a look at the error message. This applies if the error is of the format /Users/XXXX/Sites/xxxx. Rails on windows is not fond of capital letters... and OSX is fond of repacitalizing. :/)
