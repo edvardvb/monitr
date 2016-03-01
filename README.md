@@ -85,3 +85,11 @@ Now you can paste it in your browser (as described under)
 <p>
 Do points 2 to 8: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
  </p>
+#### 7) (For Windows, fixes errors)
+Run the following commands ( opens irb console ):
+> irb
+Then write the following in the console:
+> File.expand_path("./")
+> exit ( or ctrl+c ) 
+
+
