@@ -31,4 +31,5 @@ Thumbs.db
 *.tar
 *.zip
 
-
+# swap files #
+*.swp
