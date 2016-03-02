@@ -42,3 +42,6 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+#Ignore a folder I placed there on accident, but can't move because reasons :)))))
+ruby-install-0.6.0
