@@ -24,7 +24,7 @@ type the following in "terminal" (tip: press windows key and search):
 </p>
 
 <p>
-required (for developing): sudo apt-get -y install ruby ruby-dev git rails zsh xclip libsqlite3-dev 
+required (for developing): sudo apt-get -y install ruby ruby-dev git rails zsh xclip libsqlite3-dev zlib1g-dev
  </p>
 
 <p>
