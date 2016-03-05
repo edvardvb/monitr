@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'pages/about'
 
+  get '404', :to => 'application#page_not_found'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
