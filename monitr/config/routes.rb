@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get 'pages/about'
 
+  post 'pages/heater' => 'pages#toggle_heater'
+
+  post 'pages/power' => 'pages#toggle_power'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
