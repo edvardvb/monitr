@@ -1,7 +1,10 @@
 class StatusController < ApplicationController
 
   def recieve_post # function for receiving post requests
-    puts 'recieved, wohoo! :) ;) <3'  
+    puts 'recieved, wohoo! :) ;) <3'
+    puts params
+    puts params[:name]
+    a = false
   end
 
   def update # function for updating redis database
