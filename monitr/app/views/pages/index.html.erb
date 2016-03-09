@@ -1,17 +1,45 @@
 <div class="button-container">
   <div class="button-wrapper">
-    <div class="button-box">
-      <a href="/"><i class="fa fa-power-off fa-2x"></i></a>
+    <div class="upper">
+
+      <div class="button-box no-border center-icon">
+          <h1>0km/h</h1>
+        </div>
+
+    <div class="button-box no-border small-icon">
+        <%= image_tag("fuel.png", size: "64",  :alt => "fuel") %>
+        <%= image_tag("Box.png", size: "64",  :alt => "box") %>
+      </div>
+
+    <div class="button-box no-border small-icon">
+        <%= image_tag("oil.png", size: "64",  :alt => "oil") %>
+      </div>
+
+      <div class="button-box no-border center-icon">
+        <%= image_tag("maps.gif", size: "150",  :alt => "maps") %>
+      </div>
+
+      </div>
+
+
+
+
+    <div class="lower">
+
+      <div class="button-box center-icon">
+        <a href="/">Coming soon...</a>
+      </div>
+      <div class="button-box center-icon">
+        <a href="#"></a>
+      </div>
+      <div class="button-box center-icon">
+        <a href="/"><i class="fa fa-power-off fa-2x"></i></a>
+      </div>
+      <div class="button-box center-icon">
+        <a href="/"><i class="fa fa-car fa-2x"></i></a>
+      </div>
+
     </div>
-    <div class="button-box">
-      <a href="/"><i class="fa fa-car fa-2x"></i></a>
-    </div>
-    <div class="button-box">
-      <a href="/">Coming soon...</a>
-    </div>
-    <div class="button-box">
-      <a href="/"><%=
-        JSON.parse  %>.</a>
     </div>
   </div>
 </div>
