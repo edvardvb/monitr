@@ -25,4 +25,5 @@ class PagesController < ApplicationController
     puts 'Updated redis.power to value: ' + params[:power]
     head '200 OK'
   end
+
 end
