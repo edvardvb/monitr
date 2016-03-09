@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post 'pages/power' => 'pages#toggle_power'
 
-  post 'pages/status' => 'status#recieve_post'
+  post 'status' => 'status#recieve_post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
