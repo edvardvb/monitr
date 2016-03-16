@@ -14,7 +14,7 @@
       <div class="rpm-text" id="kmh"> <script type="text/javascript">
         var floatspeed = <%= $redis.get 'vehicle_speed' %>;
         var round = Math.round(floatspeed);
-        document.getElementById("kmh").innerHTML = round + " kmh";
+        document.getElementById("kmh").innerHTML = round + "   kmh";
       </script>  </div>
       <canvas id="vehicle" width="125" height="100">
       <script type="text/javascript">
@@ -74,6 +74,23 @@
 
     </div>
 
+
+    <div class="button-box">
+      <div class="200x160px" id="gauge">
+        <script>
+          var g = new JustGage({
+            id: "gauge",
+            value: 67,
+            min: 0,
+            max: 200,
+            title: "Speed",
+            label: "km/h",
+            customSectors: [0, 150, 180]
+          });
+        </script>
+      </div>
+
+    </div>
 
 
 
