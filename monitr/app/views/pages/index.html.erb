@@ -12,5 +12,27 @@
     <div class="button-box">
       <a href=""><i id="lock" class="fa fa-lock fa-2x <%= $redis.get 'lock' %>" onclick="toggleOnOff(this)"></i></a>
     </div>
+
+    <div class="button-box" id="map">
+      <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        //Insert redis coordinates here
+        var p15gps = {lat: 63.418138, lng: 10.405877};
+        var map = new google.maps.Map(mapDiv, {
+          center: p15gps,
+          zoom: 15
+        });
+        var marker = new google.maps.Marker({
+          position: p15gps,
+          map: map,
+          title: 'P15'
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+    </div>
+
   </div>
 </div>
