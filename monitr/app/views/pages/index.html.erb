@@ -15,7 +15,7 @@
       function initMap() {
         var mapDiv = document.getElementById('map');
         //Insert redis coordinates here
-        var p15gps = {lat: 63.418138, lng: 10.405877};
+        var p15gps = {lat: <%= $redis.get 'latitude' %>, lng: <%= $redis.get 'longitude' %>};
         var map = new google.maps.Map(mapDiv, {
           center: p15gps,
           zoom: 15
@@ -23,7 +23,7 @@
         var marker = new google.maps.Marker({
           position: p15gps,
           map: map,
-          title: 'P15'
+          title: p15gps
         });
       }
     </script>
