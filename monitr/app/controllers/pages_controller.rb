@@ -26,4 +26,14 @@ class PagesController < ApplicationController
     head '200 OK'
   end
 
+  def update_power
+    status = $redis.get 'power'
+    render text: status
+  end
+
+  def update_heater
+    status = $redis.get 'heater'
+    render text: status
+  end
+
 end

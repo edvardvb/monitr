@@ -1,13 +1,13 @@
 <div class="button-container">
   <div class="button-wrapper">
     <div class="button-box">
-      <i id="power" class="fa fa-power-off fa-2x <%= $redis.get 'power' %>" onclick="togglePower(this)"></i>
+      <a href=""><i id="power" class="fa fa-power-off fa-2x <%= $redis.get 'power' %>" onclick="toggleOnOff(this)"></i></a>
     </div>
     <div class="button-box">
       <a href="/"><i class="fa fa-car fa-2x"></i></a>
     </div>
     <div class="button-box">
-      <i id="heater" class="fa fa-fire fa-2x <%= $redis.get 'heater' %>" onclick="toggleHeater(this)"></i>
+      <a href=""><i id="heater" class="fa fa-fire fa-2x <%= $redis.get 'heater' %>" onclick="toggleOnOff(this)"></i></a>
     </div>
   </div>
 </div>

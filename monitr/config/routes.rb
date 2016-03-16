@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   post 'pages/heater' => 'pages#toggle_heater'
+  get 'pages/heater' => 'pages#update_heater'
 
   post 'pages/power' => 'pages#toggle_power'
+  get 'pages/power' => 'pages#update_power'
 
   post 'status' => 'status#recieve_post'
   # The priority is based upon order of creation: first created -> highest priority.
