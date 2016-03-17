@@ -12,3 +12,4 @@ $redis.set "odometer", 0.0
 $redis.set "parking_brake_status", false
 $redis.set "headlamp_status", false
 $redis.set "high_beam_status", false
+$redis.set "timestamp", 0

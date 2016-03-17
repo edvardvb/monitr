@@ -13,6 +13,7 @@ class StatusController < ApplicationController
         update(var)
       end
     end
+    $redis.set 'timestamp', params[:timestamp]
 
   end
 
