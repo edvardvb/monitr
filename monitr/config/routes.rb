@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
 
   get 'pages/timestamp' => 'pages#update_timestamp'
+  get 'pages/speed' => 'pages#update_speed'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

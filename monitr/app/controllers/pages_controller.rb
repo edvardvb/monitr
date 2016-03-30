@@ -53,4 +53,9 @@ class PagesController < ApplicationController
     status = $redis.get 'timestamp'
     render text: status
   end
+
+  def update_speed
+    status = $redis.get 'vehicle_speed'
+    render text: status
+  end
 end
