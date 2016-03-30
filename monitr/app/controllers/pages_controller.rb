@@ -26,6 +26,12 @@ class PagesController < ApplicationController
     head '200 OK'
   end
 
+  def toggle_lock
+    $redis.set 'lock', params[:lock]
+    puts 'Updated redis.lock to value: ' + params[:lock]
+    head '200 OK'
+  end
+
   def update_power
     status = $redis.get 'power'
     render text: status
@@ -33,6 +39,11 @@ class PagesController < ApplicationController
 
   def update_heater
     status = $redis.get 'heater'
+    render text: status
+  end
+
+  def update_lock
+    status = $redis.get 'lock'
     render text: status
   end
 

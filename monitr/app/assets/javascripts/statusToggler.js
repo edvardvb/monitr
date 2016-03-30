@@ -24,6 +24,6 @@ function toggleOnOff(item) {
         url: "pages/" + item.id,
         data: JSON.stringify(JSONPayload),
         dataType: "json",
-        contentType: "application/json" // not 100% sure here might need to google
+        contentType: "application/json"
     });
 }
