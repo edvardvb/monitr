@@ -7,15 +7,12 @@ function toggleOnOff(item) {
     var newStatus = "";
     if (item.className.match(/ on/)) {
         newStatus = "off";
-        item.className =
-            item.className.replace
-            ( / (off|on)/ , ' ' + newStatus);
     } else {
         newStatus = "on";
-        item.className =
-            item.className.replace
-            ( / (off|on)/ , ' ' + newStatus);
     }
+    item.className =
+        item.className.replace
+        ( / (off|on)/ , ' ' + newStatus);
     var JSONPayload = {};
     JSONPayload[item.id] = newStatus;
     console.log("Updating " + item.id + " to new status: " + newStatus);
