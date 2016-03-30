@@ -4,7 +4,7 @@ $redis = Redis.new(:host => 'localhost', :port => 6379)
 $redis.set 'heater', 'off'
 $redis.set 'power', 'off'
 $redis.set 'lock', 'on'
-$redis.set 'engine_speed', false
+$redis.set 'engine_speed', 0
 $redis.set 'vehicle_speed', 0.0
 $redis.set 'latitude', 0.0
 $redis.set 'longitude', 0.0

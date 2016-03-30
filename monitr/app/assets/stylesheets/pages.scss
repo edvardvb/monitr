@@ -13,14 +13,16 @@
   }
   .button-box {
     @include gallery(6 of 12);
-    @include display-flex;
+    display: flex;
+    flex-direction: column;
     border: 2px solid rgb(175, 175, 175);
-    font-size: 3rem;
+    font-size: 2rem;
     height: $button-size;
     margin-bottom: gutter(12)/2;
     * {
       margin: auto;
     }
+
     @include breakpoint(700px) {
       @include gallery(4 of 12);
     }
@@ -37,8 +39,10 @@
   .clickable{
     cursor: pointer;
   }
+  .rpm-text{
+    font-size: 15px;
+    font-weight:bold;
+    margin: 10px auto 5px auto;
+  }
 }
 
-.rpm-text{
-  font-size: 50%;
-}
