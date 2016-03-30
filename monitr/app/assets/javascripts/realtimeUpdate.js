@@ -3,30 +3,18 @@
  */
 
 var interval = 500; // Time in milliseconds
-var heaterUpdater = setInterval( "updateHeaterStatus()", interval );
-var powerUpdater = setInterval( "updatePowerStatus()", interval );
+var heaterUpdater = setInterval( "updateStatus('pages/heater', 'heater')", interval );
+var powerUpdater = setInterval( "updateStatus('pages/power', 'power')", interval );
+var lockUpdater = setInterval( "updateStatus('pages/lock', 'lock')", interval );
 
 
-
-function updateHeaterStatus() {
-    $.ajax("pages/heater", {
+function updateStatus(url, element){
+    $.ajax(url , {
         success: function(result){
-            var item = document.getElementById('heater');
+            var item = document.getElementById(element);
             item.className =
                 item.className.replace
                 ( / (off|on)/ , ' ' + result);
         }
     })
 }
-function updatePowerStatus() {
-    console.log(document.getElementById('power').className);
-    $.ajax("pages/power", {
-        success: function(result){
-            var item = document.getElementById('power');
-            item.className =
-                item.className.replace
-                ( / (off|on)/ , " " + result);
-        }
-    })
-}
-
