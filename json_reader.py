@@ -3,7 +3,7 @@ import datetime
 import requests
 
 
-f = open('driving-test.json', 'r')
+f = open('downtown-east.json', 'r')
 timeDict = json.loads(f.readline())
 now = datetime.datetime.now().timestamp()
 diff = now - timeDict['timestamp']

@@ -10,9 +10,12 @@
       <a href=""><i id="heater" class="fa fa-fire fa-2x <%= $redis.get 'heater' %>" onclick="toggleOnOff(this)"></i></a>
     </div>
     <div class="button-box">
+<<<<<<< HEAD
       <a href=""><i id="lock" class="fa fa-lock fa-2x <%= $redis.get 'lock' %>" onclick="toggleOnOff(this)"></i></a>
     </div>
     <div class="button-box">
+=======
+>>>>>>> edc9dc8e4aebbb005f2564d24527613709c83a2a
 
       <div class="rpm-text" id="kmh"> <script type="text/javascript">
         var floatspeed = <%= $redis.get 'vehicle_speed' %>;
@@ -121,6 +124,9 @@
 
   </div>
 </div>
+<<<<<<< HEAD
 <div>
   <p id="timestamp">Last updated: <%= $redis.get 'timestamp' %></p>
 </div>
+=======
+>>>>>>> edc9dc8e4aebbb005f2564d24527613709c83a2a
