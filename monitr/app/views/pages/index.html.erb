@@ -15,27 +15,41 @@
     <div class="button-box">
       <div class="200x160px" id="gauge"></div>
     </div>
-    <div class="button-box" id="map">
+    <div class="button-box" id='map'>
       <script>
-      function initMap() {
-        var mapDiv = document.getElementById('map');
-        var p15gps = {lat: <%= $redis.get 'latitude' %>, lng: <%= $redis.get 'longitude' %>};
-        var map = new google.maps.Map(mapDiv, {
-          center: p15gps,
-          zoom: 18,
-          mapTypeId: google.maps.MapTypeId.SATELLITE
-        });
-        var marker = new google.maps.Marker({
-          position: p15gps,
-          map: map,
-          title: p15gps
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script>
-    </div>
+        var interval = 500;
 
+        function updateMap(map, marker){
+          $.ajax('pages/maps' , {
+            success: function(result){
+              var lat = result['latitude'];
+              var lng = result['longitude'];
+              var newPos = new google.maps.LatLng(lat, lng);
+              map.panTo(newPos);
+              marker.setPosition(newPos);
+            }
+          })
+        }
+
+        function initMap() {
+          var mapDiv = document.getElementById('map');
+          var p15gps = {lat: <%= $redis.get 'latitude' %>, lng: <%= $redis.get 'longitude' %>};
+          var map = new google.maps.Map(mapDiv, {
+            center: p15gps,
+            zoom: 18,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+          });
+          var marker = new google.maps.Marker({
+            position: p15gps,
+            map: map,
+            title: p15gps
+          });
+          setInterval(updateMap, interval, map, marker)
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+              async defer></script>
+    </div>
   </div>
   <p id="timestamp">Last updated: <%= $redis.get 'timestamp' %></p>
 </div>

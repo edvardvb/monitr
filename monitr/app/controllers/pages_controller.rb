@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   require 'date'
+  require 'json'
 
   skip_before_action :verify_authenticity_token
   skip_before_filter :verify_authenticity_token
@@ -61,5 +62,13 @@ class PagesController < ApplicationController
   def update_engine_rpm
     status = $redis.get 'engine_speed'
     render text: status
+  end
+  def update_maps
+    position = {
+        :latitude => ($redis.get 'latitude'),
+        :longitude => ($redis.get 'longitude')
+    }
+    jsobj = position.to_json
+    render json: jsobj
   end
 end
