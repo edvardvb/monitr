@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  require 'date'
+
   skip_before_action :verify_authenticity_token
   skip_before_filter :verify_authenticity_token
 
@@ -47,4 +49,13 @@ class PagesController < ApplicationController
     render text: status
   end
 
+  def update_timestamp
+    status = $redis.get 'timestamp'
+    render text: status
+  end
+
+  def update_speed
+    status = $redis.get 'vehicle_speed'
+    render text: status
+  end
 end
