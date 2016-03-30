@@ -7,20 +7,16 @@ class StatusController < ApplicationController
 
   def recieve_post # function for receiving post requests
     puts 'recieved, wohoo! :) ;) <3'
-
-    for var in @@status_variables
-      if params[:name] == var
-        update(var)
-      end
+    if @@status_variables.include? params[:name]
+      update(params[:name])
     end
     $redis.set 'timestamp', params[:timestamp]
-
+    head '200 OK'
   end
 
   def update(var) # function for updating redis database
       $redis.set var, params[:value]
-      puts "updated:"
-      puts $redis.get var
+      puts 'updated: ' + ($redis.get var)
   end
 
 end
