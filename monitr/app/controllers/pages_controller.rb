@@ -58,4 +58,8 @@ class PagesController < ApplicationController
     status = $redis.get 'vehicle_speed'
     render text: status
   end
+  def update_engine_rpm
+    status = $redis.get 'engine_speed'
+    render text: status
+  end
 end
