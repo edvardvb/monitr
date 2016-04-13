@@ -8,8 +8,10 @@
 
 .header-container {
   @include full;
-  background-color: rgb(175, 175, 175);
+  background-color: whitesmoke;
   height: $header-size;
+  border-bottom: 2px solid $supergray;
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.88);
 }
 
 .header-content {
