@@ -20,7 +20,7 @@ If you are setting up linux mint:<br>
  - press "plus sign", find your keyboard<br>
  - move the new keyboardlayout to the top (press keyboard, press up-arrow)<br>
  </p>
-
+ 
 #### 2)
 <p>
 type the following in "terminal" (tip: press windows key and search):
@@ -90,7 +90,7 @@ Do points 2 to 8: https://help.github.com/articles/adding-a-new-ssh-key-to-your-
  </p>
 #### 7) (For Windows, fixes errors)
 Windows functions a little differently to UNIX-based systems.
-Two gems specifically for windows installed.
+Two gems specifically for windows installed. 
 Please use the windows branch when using windows, just in case something breaks.
 
 If you get errors, try the following:
@@ -98,7 +98,7 @@ If you get errors, try the following:
   irb
 Then write the following in the console:
   File.expand_path("./")
-  exit ( or ctrl+c )
+  exit ( or ctrl+c ) 
 
 2. Possible solution 2:
  ruby -e "puts RUBY_PLATFORM"
