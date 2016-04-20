@@ -33,8 +33,8 @@ body {
     padding-bottom: none;
 
   }
-  .button-box {
-    @include gallery(6 of 12);
+  .button-box2 {
+    @include gallery(6 of $susy);
     display: flex;
     flex-direction: column;
     border: 2px solid $supergray;
@@ -46,10 +46,59 @@ body {
     }
 
     @include breakpoint(700px) {
-      @include gallery(4 of 12);
+      @include gallery(4 of $susy);
     }
     @include breakpoint(1080px) {
-      @include gallery(3 of 12);
+      @include gallery(3 of $susy);
+    }
+  }
+  .info-row {
+    @include full;
+    margin-bottom: gutter(12);
+    .button-box {
+      @include display-flex;
+      font-size: 2rem;
+      height: $button-size;
+      * {
+        margin: auto;
+      }
+      @include span(6 of $susy split);
+      @include breakpoint(700px) {
+        @include span(4 of $susy split);
+      }
+      @include breakpoint(1080px) {
+        @include span(3 of $susy split);
+      }
+    }
+    #map {
+      height: $button-size;
+      @include span(12 of $susy split);
+      @include breakpoint(700px) {
+        @include span(4 of $susy split);
+      }
+      @include breakpoint(1080px) {
+        @include span(6 of $susy split);
+      }
+    }
+  }
+  .control-row {
+    @include full;
+
+    .button-box {
+      @include display-flex;
+      border: 2px solid $supergray;
+      font-size: 2rem;
+      height: $button-size-mobile;
+      * {
+        margin: auto;
+      }
+      @include span(4 of $susy split);
+      @include breakpoint(700px) {
+        height: $button-size;
+      }
+      @include breakpoint(1080px) {
+        @include gallery(2 of $susy split);
+      }
     }
   }
   .on{
