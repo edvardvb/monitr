@@ -1,18 +1,17 @@
 import json
 import datetime
-import time
 import requests
 
 
-f = open('stripped_downtown_east.json', 'r')
+f = open('downtown-east.json', 'r')
 timeDict = json.loads(f.readline())
 now = datetime.datetime.now().timestamp()
 diff = now - timeDict['timestamp']
 f.close()
 
-with open('stripped_downtown_east.json', 'r') as inFile:
+with open('downtown-east.json', 'r') as inFile:
     for line in inFile:
-        data = json.loads(line)
-        while not data['timestamp'] < datetime.datetime.now().timestamp() - diff:
-            time.sleep(0.01)
-        req = requests.post('http://localhost:3000/status', data=data)
+        dict = json.loads(line)
+        #while not dict['timestamp'] < datetime.datetime.now().timestamp() - diff:
+        #    a = 1
+        req = requests.post('http://localhost:3000/status', data=dict)

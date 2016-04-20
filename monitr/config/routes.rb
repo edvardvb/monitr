@@ -8,16 +8,21 @@ Rails.application.routes.draw do
 
   get 'pages/about'
 
-  post 'pages/status' => 'pages#update_states'
-
   post 'pages/heater' => 'pages#toggle_heater'
+  get 'pages/heater' => 'pages#update_heater'
 
   post 'pages/power' => 'pages#toggle_power'
+  get 'pages/power' => 'pages#update_power'
 
   post 'pages/lock' => 'pages#toggle_lock'
+  get 'pages/lock' => 'pages#update_lock'
 
   post 'status' => 'status#recieve_post'
 
+
+  get 'pages/timestamp' => 'pages#update_timestamp'
+  get 'pages/speed' => 'pages#update_speed'
+  get 'pages/engine_rpm' => 'pages#update_engine_rpm'
   get 'pages/maps' => 'pages#update_maps'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
