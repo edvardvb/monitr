@@ -1,3 +1,4 @@
+
 <div class="button-container">
   <div class="button-wrapper">
     <div class="info-row">
@@ -57,7 +58,24 @@
       </div>
     </div>
 
-    <%= render "about.html.erb" %>
+
   </div>
   <p id="timestamp">Last updated: <%= $redis.get 'timestamp' %></p>
 </div>
+
+<%= render "about.html.erb" %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".aboutpage").click(function(){
+    $("#about-wrapper").show();
+    $(".button-container").hide();
+  });
+  $(".mainpage").click(function(){
+    $("#about-wrapper").hide();
+    $(".button-container").show();
+  });
+});
+
+
+</script>
