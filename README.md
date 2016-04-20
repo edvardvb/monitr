@@ -1,6 +1,9 @@
 # monitr
 Expanding the universe
 
+Group project for TDT4140//Software Engineering at NTNU - Spring 2016
+Simulated application for monitoring your car's speed, RPM, location and more
+
 
 ### Get ready for development (on linux):
 #### 1)
