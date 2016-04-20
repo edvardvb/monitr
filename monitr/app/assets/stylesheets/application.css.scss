@@ -15,11 +15,14 @@
 }
 
 .header-content {
-  @include container(1080px);
+  @include container(960px);
   padding: 0 gutter(12)/2;
   line-height: $header-size;
   .brand {
     display: inline-block;
+  }
+  img {
+    margin-left: 0.5rem;
   }
   .header-nav {
     display: inline-block;
@@ -28,6 +31,7 @@
       display: inline-block;
       list-style-type: none;
       margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 }

@@ -28,7 +28,7 @@ body {
   }
 
   .button-wrapper {
-    @include container(1080px);
+    @include container(960px);
     padding: gutter(12)/2;
     padding-bottom: none;
 
@@ -48,7 +48,7 @@ body {
     @include breakpoint(700px) {
       @include gallery(4 of $susy);
     }
-    @include breakpoint(1080px) {
+    @include breakpoint(960px) {
       @include gallery(3 of $susy);
     }
   }
@@ -58,6 +58,7 @@ body {
     .button-box {
       @include display-flex;
       font-size: 2rem;
+      margin-bottom: gutter(12);
       height: $button-size;
       * {
         margin: auto;
@@ -66,27 +67,41 @@ body {
       @include breakpoint(700px) {
         @include span(4 of $susy split);
       }
-      @include breakpoint(1080px) {
+      @include breakpoint(960px) {
         @include span(3 of $susy split);
       }
     }
-    #map {
-      height: $button-size;
+    .map-box {
+      position: relative;
+      height: $map-size-mobile;
+      #map {
+        height: $map-size-mobile;
+        border-radius: 5px;
+        
+      }
       @include span(12 of $susy split);
       @include breakpoint(700px) {
         @include span(4 of $susy split);
+        height: $button-size;
       }
-      @include breakpoint(1080px) {
+      @include breakpoint(960px) {
         @include span(6 of $susy split);
+        #map {
+          height: $map-size;
+
+        }
       }
     }
+
   }
   .control-row {
     @include full;
 
     .button-box {
       @include display-flex;
-      border: 2px solid $supergray;
+      background-color: white;
+      border: 1px solid $supergray;
+      border-radius: 5px;
       font-size: 2rem;
       height: $button-size-mobile;
       * {
@@ -96,7 +111,7 @@ body {
       @include breakpoint(700px) {
         height: $button-size;
       }
-      @include breakpoint(1080px) {
+      @include breakpoint(960px) {
         @include gallery(2 of $susy split);
       }
     }
