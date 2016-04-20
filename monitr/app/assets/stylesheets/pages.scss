@@ -7,13 +7,39 @@ body {
 }
 
 .about{
-    @include gallery(4 of 12);
+    h2 {
+      text-decoration: underline;
+    }
+    .about-text {
+      padding-right: 1rem;
+    }
+    @include span(12 of 12 split);
+    margin-top: gutter(12);
+    @include breakpoint(700px) {
+      @include span(4 of 12 split);
+    }
+    img {
+      width: 50%;
+      display: block;
+      float: right;
+      margin: 0 auto;
+      height: auto;
+      //border: 1px solid black;
+      @include breakpoint(700px) {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .thiefimg {
+      border: none;
+    }
 }
 
 #about-wrapper {
-  font-size: 150%;
+  font-size: 100%;
   padding: gutter(12)/2;
-  @include container(1080px);
+  @include container(960px);
   display:none;
 }
 
