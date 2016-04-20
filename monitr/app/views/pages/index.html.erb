@@ -56,6 +56,8 @@
         <i id="lock" class="clickable fa fa-lock fa-2x <%= $redis.get 'lock' %>" onclick="toggleOnOff(this)"></i>
       </div>
     </div>
+
+    <%= render "about.html.erb" %>
   </div>
   <p id="timestamp">Last updated: <%= $redis.get 'timestamp' %></p>
 </div>

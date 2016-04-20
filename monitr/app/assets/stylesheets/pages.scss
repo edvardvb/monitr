@@ -10,7 +10,7 @@ body {
     @include gallery(4 of 12);
 }
 
-.about-wrapper {
+#about-wrapper {
   font-size: 150%;
   padding: gutter(12)/2;
   @include container(1080px);
@@ -65,7 +65,7 @@ body {
       }
       @include span(6 of $susy split);
       @include breakpoint(700px) {
-        @include span(4 of $susy split);
+        @include span(6 of $susy split);
       }
       @include breakpoint(960px) {
         @include span(3 of $susy split);
@@ -77,18 +77,22 @@ body {
       #map {
         height: $map-size-mobile;
         border-radius: 5px;
-        
+
       }
       @include span(12 of $susy split);
       @include breakpoint(700px) {
-        @include span(4 of $susy split);
-        height: $button-size;
+        @include span(12 of $susy split);
+        height: $map-size-tablet;
+        #map {
+          height: $map-size-tablet;
+        }
+
       }
       @include breakpoint(960px) {
         @include span(6 of $susy split);
+        height: $button-size;
         #map {
           height: $map-size;
-
         }
       }
     }

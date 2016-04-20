@@ -37,7 +37,7 @@ function initRPM(){
         label: "RPM",
         titleFontColor: '#000000',
         labelFontColor: '#000000',
-        levelColors: ['#008000', '#00FF00', '#00FF00', '#00FF00', '#FFFF00', '#FF8800', '#FF0000'],
+        levelColors: ['#008000', '#008000','#FFFF00', '#FFFF00', '#FF8800', '#FF0000'],
         levelColorsGradient: true
     });
     setInterval(updateRPM, interval, g);

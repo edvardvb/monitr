@@ -12,5 +12,15 @@
   <div class="wrapper">
     <%= yield %>
   </div>
+
+  <script>
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+      $(document).ready(function() {
+        $('#showabout').click(function() {
+          $('#about-wrapper').toggle("slide");
+        });
+      });
+    }
+  </script>
 </body>
 </html>
