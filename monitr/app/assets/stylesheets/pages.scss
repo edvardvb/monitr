@@ -2,20 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background-color: whitesmoke;
+}
+
+.about{
+    h2 {
+      text-decoration: underline;
+    }
+    .about-text {
+      padding-right: 1rem;
+    }
+    @include span(12 of 12 split);
+    margin-top: gutter(12);
+    @include breakpoint(700px) {
+      @include span(4 of 12 split);
+    }
+    img {
+      width: 50%;
+      display: block;
+      float: right;
+      margin: 0 auto;
+      height: auto;
+      //border: 1px solid black;
+      @include breakpoint(700px) {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .thiefimg {
+      border: none;
+    }
+}
+
+#about-wrapper {
+  font-size: 100%;
+  padding: gutter(12)/2;
+  @include container(960px);
+  display:none;
+}
+
 .button-container {
   @include full;
   background-color: whitesmoke;
 
+
+
+  #timestamp {
+    position:fixed;
+    bottom: 0;
+  }
+
   .button-wrapper {
-    @include container(1080px);
+    @include container(960px);
     padding: gutter(12)/2;
     padding-bottom: none;
+
   }
-  .button-box {
-    @include gallery(6 of 12);
+  .button-box2 {
+    @include gallery(6 of $susy);
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(175, 175, 175);
+    border: 2px solid $supergray;
     font-size: 2rem;
     height: $button-size;
     margin-bottom: gutter(12)/2;
@@ -24,10 +73,78 @@
     }
 
     @include breakpoint(700px) {
-      @include gallery(4 of 12);
+      @include gallery(4 of $susy);
     }
-    @include breakpoint(1080px) {
-      @include gallery(3 of 12);
+    @include breakpoint(960px) {
+      @include gallery(3 of $susy);
+    }
+  }
+  .info-row {
+    @include full;
+    margin-bottom: gutter(12);
+    .button-box {
+      @include display-flex;
+      font-size: 2rem;
+      margin-bottom: gutter(12);
+      height: $button-size;
+      * {
+        margin: auto;
+      }
+      @include span(6 of $susy split);
+      @include breakpoint(700px) {
+        @include span(6 of $susy split);
+      }
+      @include breakpoint(960px) {
+        @include span(3 of $susy split);
+      }
+    }
+    .map-box {
+      position: relative;
+      height: $map-size-mobile;
+      #map {
+        height: $map-size-mobile;
+        border-radius: 5px;
+
+      }
+      @include span(12 of $susy split);
+      @include breakpoint(700px) {
+        @include span(12 of $susy split);
+        height: $map-size-tablet;
+        #map {
+          height: $map-size-tablet;
+        }
+
+      }
+      @include breakpoint(960px) {
+        @include span(6 of $susy split);
+        height: $button-size;
+        #map {
+          height: $map-size;
+        }
+      }
+    }
+
+  }
+  .control-row {
+    @include full;
+
+    .button-box {
+      @include display-flex;
+      background-color: white;
+      border: 1px solid $supergray;
+      border-radius: 5px;
+      font-size: 2rem;
+      height: $button-size-mobile;
+      * {
+        margin: auto;
+      }
+      @include span(4 of $susy split);
+      @include breakpoint(700px) {
+        height: $button-size;
+      }
+      @include breakpoint(960px) {
+        @include gallery(2 of $susy split);
+      }
     }
   }
   .on{
@@ -45,4 +162,12 @@
     margin: 10px auto 5px auto;
   }
 }
-
+.aboutpage {
+  cursor: pointer;
+}
+.mainpage {
+  cursor: pointer;
+}
+.aboutimg {
+  border: 2px solid $supergray;
+}

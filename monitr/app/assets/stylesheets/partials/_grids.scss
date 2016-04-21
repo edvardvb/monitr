@@ -6,7 +6,7 @@
 // Easy Susy setup
 // 12 Columns, Width of gutter 1, fluid layout,
 // float layout,
-$susy: layout(12 1 fluid float outside);
+$susy: layout(12 0.2 fluid float outside);
 
 // Grids for navigation
 // Eliminates the gutter between the nav items

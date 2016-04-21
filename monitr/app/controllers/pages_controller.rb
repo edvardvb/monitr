@@ -35,22 +35,34 @@ class PagesController < ApplicationController
     head '200 OK'
   end
 
-  def update_states
-    status = {
-    heater: ($redis.get 'heater'),
-    power: ($redis.get 'power'),
-    lock: ($redis.get 'lock'),
-    timestamp: ($redis.get 'timestamp'),
-    speed: ($redis.get 'vehicle_speed'),
-    engine: ($redis.get 'engine_speed'),
-    position: {
-        latitude: ($redis.get 'latitude'),
-        longitude: ($redis.get 'longitude')
-    }
-    }
-    render json: status.to_json
+  def update_power
+    status = $redis.get 'power'
+    render text: status
   end
 
+  def update_heater
+    status = $redis.get 'heater'
+    render text: status
+  end
+
+  def update_lock
+    status = $redis.get 'lock'
+    render text: status
+  end
+
+  def update_timestamp
+    status = $redis.get 'timestamp'
+    render text: status
+  end
+
+  def update_speed
+    status = $redis.get 'vehicle_speed'
+    render text: status
+  end
+  def update_engine_rpm
+    status = $redis.get 'engine_speed'
+    render text: status
+  end
   def update_maps
     position = {
         :latitude => ($redis.get 'latitude'),
