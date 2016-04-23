@@ -15,4 +15,4 @@ with open('stripped_downtown_east.json', 'r') as inFile:
         data = json.loads(line)
         while not data['timestamp'] < datetime.datetime.now().timestamp() - diff:
             time.sleep(0.01)
-        req = requests.post('http://localhost:3000/status', data=data)
+        req = requests.post('http://37.139.16.17/status', data=data)
